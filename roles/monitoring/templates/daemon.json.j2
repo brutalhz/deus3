@@ -1,0 +1,14 @@
+{
+  "log-driver": "loki",
+  "log-opts": {
+    "loki-url": "http://{{ hostvars[inventory_hostname]['groups']['monitoring'][0] }}:3100/loki/api/v1/push",
+    "max-size": "50m",
+    "max-file": "10"
+  },
+  "registry-mirrors": ["https://registry.docker-cn.com"]
+}
+
+{
+  "metrics-addr" : "{{ hostvars[inventory_hostname]['groups']['monitoring'][0] }}:9323",
+  "experimental" : true
+}

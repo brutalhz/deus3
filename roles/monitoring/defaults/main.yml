@@ -1,0 +1,5 @@
+---
+# defaults file for monitoring
+userdir: /home/vagrant/
+config_dir: config
+loki_url: "{{ hostvars[inventory_hostname]['groups']['monitoring'][0] }}"

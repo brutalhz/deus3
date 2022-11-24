@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: yes
+  roles:
+    - docker
+    - monitoring
+
+- hosts: app
+  become: yes
+  roles:
+    - app
+
